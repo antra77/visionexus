@@ -15,6 +15,7 @@ import { register } from "./controllers/auth.js";
 import { createPost } from "./controllers/posts.js";
 import { verifyToken } from "./middleware/auth.js";
 
+
 /* CONFIGURATIONS */
 
 // Works only with import type modules
@@ -75,4 +76,5 @@ mongoose
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port:${PORT}`));
   })
+
   .catch((error) => console.log(`Error in connecting to database ${error}`));

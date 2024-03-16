@@ -18,8 +18,6 @@ export const getUserFriends = async (req, res) => {
 
     const friends = await Promise.all(
       user.friends.map((id) => User.findById(id))
-
-      // Add the requesting user to the friend's list of friends
     );
     const formattedFriends = friends.map(
       ({ _id, firstName, lastName, occupation, location, picturePath }) => {
@@ -33,7 +31,6 @@ export const getUserFriends = async (req, res) => {
 };
 
 /* UPDATE */
-
 export const addRemoveFriend = async (req, res) => {
   try {
     const { id, friendId } = req.params;
@@ -45,16 +42,13 @@ export const addRemoveFriend = async (req, res) => {
       friend.friends = friend.friends.filter((id) => id !== id);
     } else {
       user.friends.push(friendId);
-      friend.friends.push(id)
+      friend.friends.push(id);
     }
-    //to save the updated lists
-    await user.save()
-    await friend.save()
+    await user.save();
+    await friend.save();
 
     const friends = await Promise.all(
       user.friends.map((id) => User.findById(id))
-
-      // Add the requesting user to the friend's list of friends
     );
     const formattedFriends = friends.map(
       ({ _id, firstName, lastName, occupation, location, picturePath }) => {
@@ -62,8 +56,7 @@ export const addRemoveFriend = async (req, res) => {
       }
     );
 
-    res.status(200).json(formattedFriends)
-
+    res.status(200).json(formattedFriends);
   } catch (err) {
     res.status(404).json({ message: err.message });
   }
