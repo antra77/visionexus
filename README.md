@@ -9,6 +9,7 @@ Welcome to Visionexus, an Instagram clone built using the MERN stack and Materia
 ![Express](https://img.shields.io/badge/Express.js-%23404d59.svg?style=for-the-badge)
 ![React](https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react)
 ![Node.js](https://img.shields.io/badge/Node.js-%2343853D.svg?style=for-the-badge&logo=node.js)
+![Redux Toolkit](https://img.shields.io/badge/Redux_Toolkit-%23764ABC.svg?style=for-the-badge&logo=redux)
 ![Material UI](https://img.shields.io/badge/Material_UI-%230081CB.svg?style=for-the-badge&logo=material-ui)
 
 ## Features
