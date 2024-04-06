@@ -62,9 +62,10 @@ const Form = () => {
     formData.append("picturePath", values.picture.name);
 
     const savedUserResponse = await fetch(
-      "http://visionexus-server.vercel.app/auth/register",
+      "https://visionexus-server.vercel.app/auth/register",
       {
         method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: formData,
       }
     );
