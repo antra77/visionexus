@@ -23,7 +23,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
 
   const patchFriend = async () => {
     const response = await fetch(
-      `https://visionexus.vercel.app/${_id}/${friendId}`,
+      `http://localhost:3000/${_id}/${friendId}`,
       {
         method: "PATCH",
         headers: {

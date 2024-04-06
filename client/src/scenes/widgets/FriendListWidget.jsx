@@ -13,7 +13,7 @@ const FriendListWidget = ({ userId }) => {
 
   const getFriends = async () => {
     const response = await fetch(
-      `https://visionexus.vercel.app/users/${userId}/friends`,
+      `http://localhost:3000/${userId}/friends`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
