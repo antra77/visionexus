@@ -37,14 +37,7 @@ app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(morgan("common"));
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
- //cors resource sharing policy
-const cors = require('cors');
-// Allow all origins
-app.use(cors());
-// Allow specific origin(s)
-app.use(cors({
-  origin: 'https://visionexus.vercel.app'
-}));
+app.use(cors()); //cors resource sharing policy
 
 // set the directory where we are keeping our assests which will be local
 
