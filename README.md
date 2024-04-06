@@ -38,8 +38,8 @@ Welcome to Visionexus, an Instagram clone built using the MERN stack and Materia
 
 Experience Visionexus in action:
 
-- **Website**: [Visionexus Live](https://www.visionexus-demo.com)
-- **Demo Video**: [Visionexus Demo Video](https://www.youtube.com/watch?v=yourvideourl)
+- **Website**: [Visionexus Live](https://visionexus.vercel.app)
+
 
 ## Getting Started
 
