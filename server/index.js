@@ -54,6 +54,22 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
+// build
+if (process.env.NODE_ENV === "production") {
+  const path = require("path");
+  app.use(express.static(path.resolve(__dirname, 'client', 'build')));
+  app.get("*", (req, res) => {
+      res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'),function (err) {
+          if(err) {
+              res.status(500).send(err)
+          }
+      });
+  })
+}
+
+
+
+
 /* ROUTES WITH FILES */
 app.post("/auth/register", upload.single("picture"), register); // this one is separate because we will upload a file to it , thats why it needs to be in index.js
 
