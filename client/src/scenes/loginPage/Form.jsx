@@ -65,7 +65,6 @@ const Form = () => {
       "https://visionexus-server.vercel.app/auth/register",
       {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
         body: formData,
       }
     );
